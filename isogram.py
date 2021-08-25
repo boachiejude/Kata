@@ -10,4 +10,15 @@ is_isogram("moOse" ) == false # -- ignore letter case
 """
 
 def is_isogram(string):
-    pass
+    interpreted = string.lower()                # Converts the string argument to lowercase
+    for char in interpreted:
+        if interpreted.count(char) > 1:         # If .count() finds more than one occurence of the character, the function returns False
+            return False
+    return True                                 # After going through all the characters and not finding duplicates, the funtion returns True
+
+# Testing
+# The code below is not included in the code I submitted on codewars
+
+testwords = ["Dermatoglyphics", "aba", "moOse", "isIsogram"] 
+for i in testwords:
+    print(is_isogram(i))
