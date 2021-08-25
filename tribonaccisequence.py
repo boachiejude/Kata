@@ -18,4 +18,21 @@ Signature will always contain 3 numbers; n will always be a non-negative number;
 """
 
 def tribonacci(signature, n):
-    pass
+    tribonaccisequence = []
+    print("signature: {} | n: {}".format(signature, n))
+    tribonaccisequence += signature
+    forn = len(signature)-1
+    while True:
+        print(forn)
+        try:
+            tribonaccisequence.append(tribonaccisequence[forn] + tribonaccisequence[forn-1] + tribonaccisequence[forn-2])
+            print(tribonaccisequence)
+            
+        except IndexError:
+            return "Index Error"
+        
+        if forn > n:
+            return tribonaccisequence
+        forn += 1
+
+print(tribonacci([1, 1, 1], 10))
