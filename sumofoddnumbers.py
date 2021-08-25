@@ -6,7 +6,6 @@
 21    23    25    27    29
 """
 
-
 def row_sum_odd_numbers(n):
     rows = {}
     
@@ -31,3 +30,4 @@ def row_sum_odd_numbers(n):
 while True:
     print(row_sum_odd_numbers(int(input())))
 
+# August 25th, 2021...postponed till tomorrow
